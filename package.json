@@ -1,0 +1,26 @@
+{
+  "name": "devs.coffee-back-end",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "set DEBUG=express:* & nodemon --watch ./** --ext ts,json --ignore ./**/*.spec.ts --exec ts-node --project ./config/tsconfig.json ./bin/www.ts",
+    "start": "nodemon ./bin/www.ts"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.9",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/express": "^4.17.11",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
