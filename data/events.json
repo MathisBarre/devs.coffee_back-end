@@ -3,105 +3,90 @@
     "date": "2020-11-10T17:30",
     "type": "live",
     "description": "Introduction à Javascript : DOM, variable & fonction. Niveau débutant ",
-    "link": "https://discord.gg/f6BsPK9",
-    "isCompleted": true
+    "link": "https://discord.gg/f6BsPK9"
   },
   {
     "date": "2020-11-19T17:30",
     "type": "live",
     "description": "Introduction à Javascript : DOM, variable, fonction, ajax, fetch & callback. Niveau débutant ",
-    "link": "https://discord.gg/f6BsPK9",
-    "isCompleted": true
+    "link": "https://discord.gg/f6BsPK9"
   },
   {
     "date": "2020-11-30T17:30",
     "type": "LIVE",
     "description": "Apprentissage Javascript : La programmation orienté objet",
-    "link": "https://twitch.tv/mathisbarre_",
-    "isCompleted": true
+    "link": "https://twitch.tv/mathisbarre_"
   },
   {
     "date": "2020-12-02T18:00",
     "type": "LIVE",
     "description": "Apprentissage Javascript avec Aurélien Vaast : les promises",
-    "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": true
+    "link": "https://www.twitch.tv/trainingdev"
   },
   {
     "date": "2020-12-03T17:00",
     "type": "LIVE",
     "description": "Intégration en direct avec tailwindcss par Mathis Barré",
-    "link": "https://www.twitch.tv/mathisbarre_",
-    "isCompleted": true
+    "link": "https://www.twitch.tv/mathisbarre_"
   },
   {
     "date": "2020-12-29T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 2/7 : Condition & itération",
-    "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": true
+    "link": "https://www.twitch.tv/trainingdev"
   },
   {
     "date": "2020-12-30T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 3/7 : Fonctions et paramètres",
-    "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": true
+    "link": "https://www.twitch.tv/trainingdev"
   },
   {
     "date": "2020-12-31T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 4/7 : La manipulation du DOM",
-    "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": true
+    "link": "https://www.twitch.tv/trainingdev"
   },
   {
     "date": "2021-01-01T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 5/7 : Les événements",
-    "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": true
+    "link": "https://www.twitch.tv/trainingdev"
   },
   {
     "date": "2021-01-02T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 6/7 : API et manipulation données navigateur",
-    "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": true
+    "link": "https://www.twitch.tv/trainingdev"
   },
   {
     "date": "2021-01-03T12:00",
     "type": "LIVE",
     "description": "Introduction à javascript 7/7 : La POO avec les classes",
-    "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": true
+    "link": "https://www.twitch.tv/trainingdev"
   },
   {
     "date": "2021-01-07T14:00",
     "type": "LIVE",
     "description": "Code review de deux projets ohmyfood par mathis barré",
-    "link": "https://www.twitch.tv/mathisbarre_",
-    "isCompleted": false
+    "link": "https://www.twitch.tv/mathisbarre_"
   },
   {
     "date": "2021-01-07T18:00",
     "type": "LIVE",
     "description": "Débugger avec les outils développeurs chrome",
-    "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": false
+    "link": "https://www.twitch.tv/trainingdev"
   },
   {
     "date": "2021-01-19T18:30",
     "type": "TALK",
     "description": "Migration JS vers TS sur du react",
-    "link": "https://www.meetup.com/fr-FR/NightClazz-By-ZenikaGrenoble/events/275628909/",
-    "isCompleted": false
+    "link": "https://www.meetup.com/fr-FR/NightClazz-By-ZenikaGrenoble/events/275628909/"
   },
   {
     "date": "2021-01-19T18:30",
     "type": "LIVE",
     "description": "Les bases de Vue.js 3",
-    "link": "https://www.twitch.tv/trainingdev",
-    "isCompleted": false
+    "link": "https://www.twitch.tv/trainingdev"
   }
 ]

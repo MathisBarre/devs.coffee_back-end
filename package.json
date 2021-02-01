@@ -4,16 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "set DEBUG=express:* & nodemon --watch ./** --ext ts,json --ignore ./**/*.spec.ts --exec ts-node --project ./config/tsconfig.json ./bin/www.ts",
-    "start": "nodemon ./bin/www.ts"
+    "start": "node ./bin/www.ts"
   },
   "dependencies": {
     "@types/cors": "^2.8.9",
+    "@types/mongoose": "^5.10.3",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "debug": "^4.3.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
+    "mongoose": "^5.11.14",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
