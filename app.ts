@@ -21,11 +21,7 @@ const app: Express = express()
 dotenv.config()
 
 // - DATABASE
-const dbProtocol: string = 'mongodb+srv:/'
-const dbAccount: string = `/mathisbarre:${process.env.DB_PASSWORD ?? ''}`
-const dbCluster: string = `@free-cluster.qwrbz.mongodb.net/${process.env.DB_NAME ?? ''}`
-const dbParams: string = '?retryWrites=true&w=majority'
-const dbUrl: string = dbProtocol + dbAccount + dbCluster + dbParams
+const dbUrl: string = process.env.DB_URI ?? ''
 
 mongoose
   .connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -33,7 +29,6 @@ mongoose
     console.log('Connection to the mongodb database successfully completed!')
   })
   .catch(() => {
-    console.log(dbUrl)
     throw new Error('The connection to the mongodb database has failed')
   })
 
