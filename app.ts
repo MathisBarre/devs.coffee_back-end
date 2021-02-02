@@ -1,4 +1,3 @@
-
 /* - express ------------------ */
 import express, { Express } from 'express'
 
@@ -22,12 +21,17 @@ const app: Express = express()
 dotenv.config()
 
 // - DATABASE
-mongoose.connect(
-  `mongodb+srv://mathisbarre:${process.env.DB_PASSWORD}@free-cluster.qwrbz.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
-  { useNewUrlParser: true, useUnifiedTopology: true }
-)
-  .then(() => { console.log('Connection to the mongodb database successfully completed!') })
-  .catch(() => { console.error('The connection to the mongodb database has failed') })
+mongoose
+  .connect(
+    `mongodb+srv://mathisbarre:${process.env.DB_PASSWORD}@free-cluster.qwrbz.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
+  .then(() => {
+    console.log('Connection to the mongodb database successfully completed!')
+  })
+  .catch(() => {
+    console.error('The connection to the mongodb database has failed')
+  })
 
 // - MIDDLEWARE
 const corsOptions: CorsOptions = {

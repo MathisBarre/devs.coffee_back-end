@@ -1,12 +1,12 @@
 import { Schema, model, Model, Document } from 'mongoose'
 
 export interface IdiscordServer extends Document {
-  name: string;
-  description: string;
-  href: string;
-  img: string;
-  learningPaths?: Array<string>;
-  apiUrl?: string;
+  name: string
+  description: string
+  href: string
+  img: string
+  learningPaths?: Array<string>
+  apiUrl?: string
 }
 
 const discordServerSchema: Schema = new Schema({
@@ -18,6 +18,9 @@ const discordServerSchema: Schema = new Schema({
   apiUrl: { type: String, required: false }
 })
 
-const DiscordServer: Model<IdiscordServer> = model('Discord', discordServerSchema)
+const DiscordServer: Model<IdiscordServer> = model(
+  'Discord',
+  discordServerSchema
+)
 
 export default DiscordServer
