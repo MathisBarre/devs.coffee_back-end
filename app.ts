@@ -21,11 +21,11 @@ const app: Express = express()
 dotenv.config()
 
 // - DATABASE
-const dbUrl: string = `
-  mongodb+srv://mathisbarre:${process.env.DB_PASSWORD ?? ''}
-  @free-cluster.qwrbz.mongodb.net/${process.env.DB_NAME ?? ''}
-  ?retryWrites=true&w=majority
-`
+const dbProtocol: string = 'mongodb+srv:/'
+const dbAccount: string = `/mathisbarre:${process.env.DB_PASSWORD ?? ''}`
+const dbCluster: string = `@free-cluster.qwrbz.mongodb.net/${process.env.DB_NAME ?? ''}`
+const dbParams: string = '?retryWrites=true&w=majority'
+const dbUrl: string = dbProtocol + dbAccount + dbCluster + dbParams
 
 mongoose
   .connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -33,7 +33,8 @@ mongoose
     console.log('Connection to the mongodb database successfully completed!')
   })
   .catch(() => {
-    console.error('The connection to the mongodb database has failed')
+    console.log(dbUrl)
+    throw new Error('The connection to the mongodb database has failed')
   })
 
 // - MIDDLEWARE
@@ -49,7 +50,7 @@ app.use(helmet())
 app.use(express.json())
 
 // - ROUTES
-app.use('/api/v1/', indexRouter)
+app.use('/', indexRouter)
 app.use('/api/v1/events', eventsRouter)
 app.use('/api/v1/discordServers', discordServersRouter)
 app.use('/api/v1/initiatives', initiativesRouter)
