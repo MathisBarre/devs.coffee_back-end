@@ -5,7 +5,7 @@ export interface IdiscordServer extends Document {
   description: string
   href: string
   img: string
-  learningPaths?: Array<string>
+  learningPaths?: string[]
   apiUrl?: string
 }
 

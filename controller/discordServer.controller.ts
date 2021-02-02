@@ -2,9 +2,9 @@ import { Response, Request } from 'express'
 import { Document } from 'mongoose'
 import DiscordServer, { IdiscordServer } from '../models/discordServer.model'
 
-export function getAllDiscordServers(req: Request, res: Response) {
+export function getAllDiscordServers(req: Request, res: Response): void {
   DiscordServer.find()
-    .then((discordServers: Array<IdiscordServer>) => {
+    .then((discordServers: IdiscordServer[]) => {
       res.status(200).json(discordServers)
     })
     .catch((error: Error) => {
@@ -12,7 +12,7 @@ export function getAllDiscordServers(req: Request, res: Response) {
     })
 }
 
-export function addOneDiscordServer(req: Request, res: Response) {
+export function addOneDiscordServer(req: Request, res: Response): void {
   const discordServer: Document = new DiscordServer(req.body)
 
   discordServer
@@ -28,7 +28,7 @@ export function addOneDiscordServer(req: Request, res: Response) {
     })
 }
 
-export function getOneDiscordServer(req: Request, res: Response) {
+export function getOneDiscordServer(req: Request, res: Response): void {
   DiscordServer.findById(req.params.id)
     .then((discordServer: IdiscordServer) => {
       res.status(200).json(discordServer)
@@ -38,7 +38,7 @@ export function getOneDiscordServer(req: Request, res: Response) {
     })
 }
 
-export function updateOneDiscordServer(req: Request, res: Response) {
+export function updateOneDiscordServer(req: Request, res: Response): void {
   DiscordServer.updateOne(
     { _id: req.params.id },
     { _id: req.params.id, ...req.body }
@@ -54,7 +54,7 @@ export function updateOneDiscordServer(req: Request, res: Response) {
     })
 }
 
-export function deleteOneDiscordServer(req: Request, res: Response) {
+export function deleteOneDiscordServer(req: Request, res: Response): void {
   DiscordServer.deleteOne({ _id: req.params.id })
     .then(() => {
       res.status(200).json({ message: 'Discord server successfully deleted' })
