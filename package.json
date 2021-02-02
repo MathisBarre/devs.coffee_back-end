@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "set DEBUG=express:* & nodemon --watch ./** --ext ts,json --ignore ./**/*.spec.ts --exec ts-node --project ./config/tsconfig.json ./bin/www.ts",
-    "start": "node ./bin/www.ts"
+    "start": "node ./bin/www.ts",
+    "lint": "eslint ./**/*.ts",
+    "lint-fix": "eslint --fix ./**/*.ts",
+    "format": "prettier --write ./**/*.ts"
   },
   "dependencies": {
     "@types/cors": "^2.8.9",
@@ -16,7 +19,8 @@
     "express": "^4.17.1",
     "helmet": "^4.4.1",
     "mongoose": "^5.11.14",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "prettier": "^2.2.1"
   },
   "devDependencies": {
     "@types/debug": "^4.1.5",
