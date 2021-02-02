@@ -18,9 +18,6 @@ const discordServerSchema: Schema = new Schema({
   apiUrl: { type: String, required: false }
 })
 
-const DiscordServer: Model<IdiscordServer> = model(
-  'Discord',
-  discordServerSchema
-)
+const DiscordServer: Model<IdiscordServer> = model('Discord', discordServerSchema)
 
 export default DiscordServer

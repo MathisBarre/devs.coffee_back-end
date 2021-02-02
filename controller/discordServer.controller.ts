@@ -39,10 +39,7 @@ export function getOneDiscordServer(req: Request, res: Response): void {
 }
 
 export function updateOneDiscordServer(req: Request, res: Response): void {
-  DiscordServer.updateOne(
-    { _id: req.params.id },
-    { _id: req.params.id, ...req.body }
-  )
+  DiscordServer.updateOne({ _id: req.params.id }, { _id: req.params.id, ...req.body })
     .then(() => {
       res.status(200).json({
         message: 'Discord server successfully updated',
