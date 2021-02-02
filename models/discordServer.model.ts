@@ -1,4 +1,4 @@
-import { Schema, model, Model, Document } from "mongoose"
+import { Schema, model, Model, Document } from 'mongoose'
 
 export interface IdiscordServer extends Document {
   name: string;
@@ -10,14 +10,14 @@ export interface IdiscordServer extends Document {
 }
 
 const discordServerSchema: Schema = new Schema({
-  name: {type: String, required: true },
-  description: {type: String, required: true },
-  href: {type: String, required: true },
-  img: {type: String, required: true },
-  learningPaths: [{type: Array, required: false }],
-  apiUrl: {type: String, required: false }
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  href: { type: String, required: true },
+  img: { type: String, required: true },
+  learningPaths: [{ type: Array, required: false }],
+  apiUrl: { type: String, required: false }
 })
 
-const DiscordServer: Model<IdiscordServer> = model("Discord", discordServerSchema)
+const DiscordServer: Model<IdiscordServer> = model('Discord', discordServerSchema)
 
 export default DiscordServer
