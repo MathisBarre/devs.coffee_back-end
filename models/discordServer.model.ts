@@ -6,6 +6,7 @@ export interface IdiscordServer extends Document {
   link: string
   imgUrl: string
   learningPaths?: string[]
+  learningPathsDetails: string
   apiUrl?: string
 }
 
@@ -15,9 +16,10 @@ const discordServerSchema: Schema = new Schema({
   link: { type: String, required: true },
   imgUrl: { type: String, required: true },
   learningPaths: [{ type: Array, required: false }],
+  learningPathsDetails: { type: String, required: true },
   apiUrl: { type: String, required: false }
 })
 
-const DiscordServer: Model<IdiscordServer> = model('Discord', discordServerSchema)
+const DiscordServer: Model<IdiscordServer> = model('DiscordServer', discordServerSchema)
 
 export default DiscordServer

@@ -1,5 +1,4 @@
 import { Response, Request } from 'express'
-import { Document } from 'mongoose'
 import DiscordServer, { IdiscordServer } from '../models/discordServer.model'
 
 export function getAllDiscordServers(req: Request, res: Response): void {
@@ -13,10 +12,7 @@ export function getAllDiscordServers(req: Request, res: Response): void {
 }
 
 export function addOneDiscordServer(req: Request, res: Response): void {
-  const discordServer: Document = new DiscordServer(req.body)
-
-  discordServer
-    .save()
+  DiscordServer.create(req.body)
     .then(() => {
       res.status(201).json({
         message: 'New discord server successfully added',
