@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "set DEBUG=express:* & nodemon --watch ./** --ext ts,json --ignore ./**/*.spec.ts --exec ts-node --project ./config/tsconfig.json ./bin/www.ts",
+    "dev": "set DEBUG=express:* & nodemon --watch ./** --ext ts,json --ignore ./**/*.spec.ts --exec ts-node --project ./tsconfig.json ./bin/www.ts",
     "start": "node ./bin/www.ts",
     "lint": "eslint ./**/*.ts",
     "lint-fix": "eslint --fix ./**/*.ts",
@@ -29,6 +29,7 @@
     "@typescript-eslint/parser": "^4.14.2",
     "eslint": "^7.19.0",
     "eslint-config-standard": "^16.0.2",
+    "eslint-config-standard-with-typescript": "^20.0.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
