@@ -5,6 +5,7 @@ import express, { Express } from 'express'
 import dotenv from 'dotenv'
 import helmet from 'helmet'
 import cors, { CorsOptions } from 'cors'
+import authVerification from './middleware/auth'
 
 /* - database ----------------- */
 import mongoose from 'mongoose'
@@ -15,6 +16,7 @@ import discordServersRouter from './routes/discordServers.route'
 import eventsRouter from './routes/events.route'
 import initiativesRouter from './routes/initiatives.route'
 import ressourcesRouter from './routes/ressources.route'
+import userRouter from './routes/user.route'
 
 const app: Express = express()
 
@@ -46,10 +48,11 @@ app.use(express.json())
 
 // - ROUTES
 app.use('/', indexRouter)
-app.use('/api/v1/events', eventsRouter)
-app.use('/api/v1/discordServers', discordServersRouter)
-app.use('/api/v1/initiatives', initiativesRouter)
-app.use('/api/v1/ressources', ressourcesRouter)
+app.use('/api/v1/events', authVerification, eventsRouter)
+app.use('/api/v1/discordServers', authVerification, discordServersRouter)
+app.use('/api/v1/initiatives', authVerification, initiativesRouter)
+app.use('/api/v1/ressources', authVerification, ressourcesRouter)
+app.use('/api/v1/auth', authVerification, userRouter)
 
 // TODO:  Global error handling
 

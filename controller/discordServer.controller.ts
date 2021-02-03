@@ -7,7 +7,7 @@ export function getAllDiscordServers(req: Request, res: Response): void {
       res.status(200).json(discordServers)
     })
     .catch((error: Error) => {
-      res.status(400).json(error)
+      res.status(400).json({ message: error.message })
     })
 }
 
@@ -20,7 +20,7 @@ export function addOneDiscordServer(req: Request, res: Response): void {
       })
     })
     .catch((error: Error) => {
-      res.status(400).json(error)
+      res.status(400).json({ message: error.message })
     })
 }
 
@@ -30,7 +30,7 @@ export function getOneDiscordServer(req: Request, res: Response): void {
       res.status(200).json(discordServer)
     })
     .catch((error: Error) => {
-      res.status(400).json(error)
+      res.status(400).json({ message: error.message })
     })
 }
 
@@ -43,7 +43,7 @@ export function updateOneDiscordServer(req: Request, res: Response): void {
       })
     })
     .catch((error: Error) => {
-      res.status(400).json(error)
+      res.status(400).json({ message: error.message })
     })
 }
 
@@ -53,6 +53,6 @@ export function deleteOneDiscordServer(req: Request, res: Response): void {
       res.status(200).json({ message: 'Discord server successfully deleted' })
     })
     .catch((error: Error) => {
-      res.status(400).json(error)
+      res.status(400).json({ message: error.message })
     })
 }
