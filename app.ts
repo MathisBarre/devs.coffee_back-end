@@ -26,7 +26,7 @@ dotenv.config()
 const dbUrl: string = process.env.DB_URI ?? ''
 
 mongoose
-  .connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
   .then(() => {
     console.log('Connection to the mongodb database successfully completed!')
   })
