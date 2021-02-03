@@ -13,7 +13,7 @@ export default function authVerification(req: Request, res: Response, next: Next
     if (req.body?.userId !== userId) throw new Error('Invalid user ID')
 
     next()
-  } catch {
-    res.status(401).json({ message: 'Invalid request' })
+  } catch (error: any) {
+    res.status(401).json({ message: error.message ?? 'Invalid request' })
   }
 }

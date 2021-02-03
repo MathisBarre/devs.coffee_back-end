@@ -5,7 +5,6 @@ import express, { Express } from 'express'
 import dotenv from 'dotenv'
 import helmet from 'helmet'
 import cors, { CorsOptions } from 'cors'
-import authVerification from './middleware/auth'
 
 /* - database ----------------- */
 import mongoose from 'mongoose'
@@ -48,11 +47,11 @@ app.use(express.json())
 
 // - ROUTES
 app.use('/', indexRouter)
-app.use('/api/v1/events', authVerification, eventsRouter)
-app.use('/api/v1/discordServers', authVerification, discordServersRouter)
-app.use('/api/v1/initiatives', authVerification, initiativesRouter)
-app.use('/api/v1/ressources', authVerification, ressourcesRouter)
-app.use('/api/v1/auth', authVerification, userRouter)
+app.use('/api/v1/auth', userRouter)
+app.use('/api/v1/events', eventsRouter)
+app.use('/api/v1/discordServers', discordServersRouter)
+app.use('/api/v1/initiatives', initiativesRouter)
+app.use('/api/v1/ressources', ressourcesRouter)
 
 // TODO:  Global error handling
 
